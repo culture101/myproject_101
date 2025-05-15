@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/style/main.css?v=1" />
+<img src="/image/divrhino-logo1.png" alt="" />
+<div class="container">
+	<form id="form-update-fact" data-factid="{{ .Fact.ID }}">
+		<label for="question">
+			<span>Question</span>
+			<input type="text" name="question" value="{{ .Fact.Question }}" />
+		</label>
+
+		<label for="answer">
+			<span>Answer</span>
+			<input type="text" name="answer" value="{{ .Fact.Answer }}" />
+		</label>
+
+		<input type="submit" value="Update" />
+	</form>
+</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Div Rhino Trivia</title>
+</head>
+<link rel="stylesheet" href="/style/main.css?v=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<body>
+    <div class="wrapper">
+        {{template "header" .}} <!-- import partial -->
+        <h1>{{.Title}}</h1>
+        <h2>
+            {{.Subtitle}}
+        </h2>
+        {{embed}}
+    </div>
+</body>
+</html>
+
+<script src="/javascript/app.js"></script>
+
+
+<!-- Add id to script tag -->
+<script id="main" src="/javascript/app.js"></script>
+
+<!-- For local development only: Snippet to append timestamps -->
+<script>
+    const timeStamp = Date.now()
+    const stylesheetLink = document.querySelector("link#styles")
+    const appScriptLink = document.querySelector("script#main")
+    stylesheetLink.href += `?t=${timeStamp}`
+    appScriptLink.src += `?t=${timeStamp}`
+</script>
